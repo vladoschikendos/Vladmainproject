@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{02D97A18-B7AF-484D-AF18-572EAB3EF2D6}</ProjectGuid>
+    <ProjectGuid>{A7319EA5-E5F6-6181-0C80-06ADBBE14BAD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Vladmainproject</RootNamespace>
     <AssemblyName>Vladmainproject</AssemblyName>
