@@ -4,29 +4,25 @@ class Program
 {
     static void Main()
     {
-        // 1
         Console.WriteLine("1: " + Math.Round(Math.E, 1));
 
-        // 2
         Console.WriteLine("2:\n50\n10");
 
-        // 3
         Random rnd = new Random();
         Console.WriteLine("3:");
         for (int i = 0; i < 4; i++)
             Console.WriteLine(rnd.Next(1, 100));
 
-        // 4
         Console.WriteLine("4: введите число");
         double num4 = double.Parse(Console.ReadLine());
         Console.WriteLine(num4 + 10);
 
-        // 5
+        
         Console.WriteLine("5: введите x");
         double x5 = double.Parse(Console.ReadLine());
         Console.WriteLine(Math.Cos(x5));
 
-        // 6
+        
         Console.WriteLine("6: введите a, b, h");
         double a6 = double.Parse(Console.ReadLine());
         double b6 = double.Parse(Console.ReadLine());
@@ -34,26 +30,26 @@ class Program
         double side = Math.Sqrt(h6 * h6 + Math.Pow((b6 - a6) / 2, 2));
         Console.WriteLine(a6 + b6 + 2 * side);
 
-        // 7
+        
         Console.WriteLine("7:");
         Console.WriteLine("Мир Труд Май");
         Console.WriteLine("Мир");
         Console.WriteLine("Труд");
         Console.WriteLine("Май");
 
-        // 8
+        
         Console.WriteLine("8: введите 2 числа");
         double a8 = double.Parse(Console.ReadLine());
         double b8 = double.Parse(Console.ReadLine());
         double t8 = a8; a8 = b8; b8 = t8;
         Console.WriteLine(a8 + " " + b8);
 
-        // 9
+        
         Console.WriteLine("9: введите число");
         double num9 = double.Parse(Console.ReadLine());
         Console.WriteLine("Вы ввели число " + num9);
 
-        // 10
+        
         Console.WriteLine("10: введите a, b, c");
         double a10 = double.Parse(Console.ReadLine());
         double b10 = double.Parse(Console.ReadLine());
@@ -69,14 +65,13 @@ class Program
         else
             Console.WriteLine("Корней нет");
 
-        // 11
+        
         Console.WriteLine("11: введите 2 целых числа");
         int a11 = int.Parse(Console.ReadLine());
         int b11 = int.Parse(Console.ReadLine());
         Console.WriteLine("Среднее арифметическое: " + (a11 + b11) / 2.0);
         Console.WriteLine("Среднее геометрическое: " + Math.Sqrt(a11 * b11));
-
-        // 12
+      
         Console.WriteLine("12: введите x1, y1, x2, y2");
         double x1 = double.Parse(Console.ReadLine());
         double y1 = double.Parse(Console.ReadLine());
@@ -84,42 +79,42 @@ class Program
         double y2 = double.Parse(Console.ReadLine());
         Console.WriteLine(Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)));
 
-        // 13
+        
         Console.WriteLine("13: введите a, b, c");
         int a13 = int.Parse(Console.ReadLine());
         int b13 = int.Parse(Console.ReadLine());
         int c13 = int.Parse(Console.ReadLine());
-        // схема а
+        
         int ta = a13, tb = b13, tc = c13;
         b13 = tc; a13 = tb; c13 = ta;
         Console.WriteLine("а) " + a13 + " " + b13 + " " + c13);
-        // схема б
+        
         ta = a13; tb = b13; tc = c13;
         b13 = ta; c13 = tb; a13 = tc;
         Console.WriteLine("б) " + a13 + " " + b13 + " " + c13);
 
-        // 14
+
         Console.WriteLine("14: введите n секунд");
         int n = int.Parse(Console.ReadLine());
         Console.WriteLine("Часов: " + n / 3600);
         Console.WriteLine("Минут с начала часа: " + (n % 3600) / 60);
         Console.WriteLine("Секунд с начала минуты: " + n % 60);
 
-        // 15
+       
         Console.WriteLine("15: " + (543 / 130));
 
-        // 16
+        
         Console.WriteLine("16: введите 3-значное число");
         int num16 = int.Parse(Console.ReadLine());
         Console.WriteLine(num16 % 10 * 100 + num16 / 10);
 
-        // 17
+        
         Console.WriteLine("17: введите n > 999");
         int n17 = int.Parse(Console.ReadLine());
         Console.WriteLine("Сотен: " + (n17 / 100) % 10);
         Console.WriteLine("Тысяч: " + n17 / 1000);
 
-        // 18
+        
         Console.WriteLine("18а: введите имя");
         string name18 = Console.ReadLine();
         Console.WriteLine(name18);
@@ -127,7 +122,7 @@ class Program
         name18 = Console.ReadLine();
         Console.WriteLine("Привет, " + name18);
 
-        // 19
+        
         Console.WriteLine("19: поздоровайтесь");
         Console.ReadLine();
         Console.WriteLine("Как вас зовут?");
@@ -144,7 +139,6 @@ class Program
         Console.ForegroundColor = (ConsoleColor)rnd.Next(1, 16);
         Console.ResetColor();
 
-        // 20
         Console.WriteLine("20a: случайные 12 цифр");
         int[] digits = new int[12];
         int sum = 0;
