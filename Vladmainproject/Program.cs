@@ -18,7 +18,7 @@ namespace Vladmainproject
     {
         static void Task1()
         {
-            int[] s = { 2, 5, 8, 12, 10, 15, 18, 20, 25, 30 };
+            int[] s = {2, 5, 8, 12, 13, 15, 18, 17, 25, 30 };
 
             bool isSorted = true;
             int vI = -1;
