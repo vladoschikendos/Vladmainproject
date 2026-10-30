@@ -156,7 +156,7 @@ class Program
     static void Main()
     {
         
-        string[] строки = File.ReadAllLines("питомцы.txt");
+        string[] строки = @"D:\Влад\Downloads\питомцы.txt";
 
         Животное[] питомцы = new Животное[строки.Length];
 
