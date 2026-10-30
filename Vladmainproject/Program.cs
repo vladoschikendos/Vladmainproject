@@ -155,8 +155,15 @@ class Program
 {
     static void Main()
     {
+        string fullPath = @"D:\Влад\Downloads\питомцы.txt";
+
+        if (!File.Exists(fullPath))
+        {
+            Console.WriteLine($"Файл не найден: {fullPath}");
+        }
         
-        string[] строки = @"D:\Влад\Downloads\питомцы.txt";
+        string[] строки = File.ReadAllLines(fullPath);
+       
 
         Животное[] питомцы = new Животное[строки.Length];
 
@@ -186,14 +193,5 @@ class Program
         }
 
         
-        Кошка к = new Кошка("Мурка", "Персидская");
-        Собака с = new Собака("Рекс", "Лабрадор");
-        к.Мурлыкать();
-        с.ПринестиМяч();
-
-        
-        к.Имя = "Мурка2";
-        к.Порода = "Сиамская";
-        Console.WriteLine($"Переименована кошка: {к.Имя}, порода: {к.Порода}");
     }
 }
