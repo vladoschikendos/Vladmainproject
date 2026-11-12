@@ -32,10 +32,6 @@ namespace Vladmainproject
             Console.WriteLine($"Переведено {sum} от {from.Owner} к {this.Owner}");
         }
 
-        public override string ToString()
-        {
-            return $"{Owner}: {Balance}";
-        }
     }
 
     class Song
@@ -99,19 +95,21 @@ namespace Vladmainproject
 
         static void Task81()
         {
+            
             Console.WriteLine("\n===== УПРАЖНЕНИЕ 8.1 =====");
+
             BankAccount a = new BankAccount("Влад", 1000);
             BankAccount b = new BankAccount("Иван", 500);
 
             Console.WriteLine("До перевода:");
-            Console.WriteLine("  " + a);
-            Console.WriteLine("  " + b);
-
+            Console.WriteLine($"  {a.Owner}: {a.Balance}");
+            Console.WriteLine($"  {b.Owner}: {b.Balance}");
+            
             b.Transfer(a, 300);
-
             Console.WriteLine("После перевода:");
-            Console.WriteLine("  " + a);
-            Console.WriteLine("  " + b);
+            Console.WriteLine($"  {a.Owner}: {a.Balance}");
+            Console.WriteLine($"  {b.Owner}: {b.Balance}");
+            
         }
 
         static void Task82()
@@ -127,8 +125,7 @@ namespace Vladmainproject
             Console.WriteLine("\n===== УПРАЖНЕНИЕ 8.3 =====");
 
             Console.Write("Введите полный путь к файлу: ");
-            string input = "@"+ Console.ReadLine();
-            Console.WriteLine(input);
+            string input = Console.ReadLine();
             
             if (!File.Exists(input))
             {
@@ -157,17 +154,7 @@ namespace Vladmainproject
         {
             Console.WriteLine("\n===== ДОМАШНЕЕ ЗАДАНИЕ 8.1 =====");
 
-            string inputFile = "fio_mail.txt";
-            if (!File.Exists(inputFile))
-            {
-                File.WriteAllLines(inputFile, new[]
-                {
-                    "Иванов Иван Иванович # iviviv@mail.ru",
-                    "Петров Петр Петрович # petr@mail.ru"
-                });
-                Console.WriteLine($"Создан файл {inputFile}");
-            }
-
+            string inputFile = @"D:\Влад\Downloads\fio_mail.txt";
             string[] lines = File.ReadAllLines(inputFile);
             List<string> emails = new List<string>();
 
@@ -178,7 +165,8 @@ namespace Vladmainproject
                 emails.Add(s);
             }
 
-            File.WriteAllLines("emails.txt", emails);
+            string email = @"D:\Влад\Downloads\emails.txt";
+            File.WriteAllLines(email, emails);
             Console.WriteLine("Список адресов записан в emails.txt:");
             foreach (string e in emails)
                 Console.WriteLine("  " + e);
