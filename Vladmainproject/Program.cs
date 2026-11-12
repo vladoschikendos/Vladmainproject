@@ -125,18 +125,20 @@ namespace Vladmainproject
         static void Task83()
         {
             Console.WriteLine("\n===== УПРАЖНЕНИЕ 8.3 =====");
-            Console.Write("Введите имя файла: ");
-            string input = Console.ReadLine();
 
+            Console.Write("Введите полный путь к файлу: ");
+            string input = "@"+ Console.ReadLine();
+            Console.WriteLine(input);
+            
             if (!File.Exists(input))
             {
                 Console.WriteLine("Файл не существует. Работа завершена.");
                 return;
             }
-
-            string output = "output.txt";
+            string output = @"D:\Влад\Downloads\output.txt";
             string content = File.ReadAllText(input);
             File.WriteAllText(output, content.ToUpper());
+
             Console.WriteLine($"Содержимое записано в {output} заглавными буквами.");
         }
 
