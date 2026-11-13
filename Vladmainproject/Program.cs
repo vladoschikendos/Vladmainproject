@@ -130,8 +130,6 @@ namespace Vladmainproject
             AssignTask(rashid, lukas, tasks[5]);
             AssignTask(dina, lyaysan, tasks[2]);
 
-            Console.WriteLine("\nНажмите любую клавишу для выхода...");
-            Console.ReadKey();
         }
 
         static void AssignTask(Employee from, Employee to, Task task)
@@ -139,7 +137,7 @@ namespace Vladmainproject
             Console.WriteLine($"\nОт {from.Name} даётся задача «{task.Title}» сотруднику {to.Name}.");
 
             if (task.TargetDepartment != to.Department && to.Department != "начальство")
-                Console.WriteLine($"  ⚠ Задача для {task.TargetDepartment}, а {to.Name} — {to.Department}");
+                Console.WriteLine($"Задача для {task.TargetDepartment}, а {to.Name} — {to.Department}");
 
             if (to.TakesTask(from))
                 Console.WriteLine($"{to.Name} БЕРЁТ задачу.");
