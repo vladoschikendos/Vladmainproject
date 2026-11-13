@@ -48,23 +48,17 @@ namespace Vladmainproject
         static void Main(string[] args)
         {
             Console.WriteLine("===== ИЕРАРХИЯ ФИРМЫ =====");
-
             Employee timur = new Employee("Тимур", "начальство");
-
             Employee rashid = new Employee("Рашид", "начальство");
-            Employee ilham = new Employee("О Ильхам", "начальство");
-
+            Employee ilham = new Employee("Ильхам", "начальство");
             Employee lukas = new Employee("Лукас", "бухгалтерия");
-
             Employee orkady = new Employee("Оркадий", "начальство");
             Employee volodya = new Employee("Володя", "начальство");
-
             Employee ilshat = new Employee("Ильшат", "системщики");
             Employee ivanych = new Employee("Иваныч", "системщики");
             Employee ilya = new Employee("Илья", "системщики");
             Employee vitya = new Employee("Витя", "системщики");
             Employee zhenya = new Employee("Женя", "системщики");
-
             Employee sergey = new Employee("Сергей", "разработчики");
             Employee lyaysan = new Employee("Ляйсан", "разработчики");
             Employee marat = new Employee("Марат", "разработчики");
@@ -75,19 +69,15 @@ namespace Vladmainproject
             rashid.AddBoss(timur);
             ilham.AddBoss(timur);
             lukas.AddBoss(rashid);
-
             orkady.AddBoss(ilham);
             volodya.AddBoss(orkady);
-
             ilshat.AddBoss(orkady);
             sergey.AddBoss(orkady);
             sergey.AddBoss(volodya);
-
             ivanych.AddBoss(ilshat);
             ilya.AddBoss(ilshat);
             vitya.AddBoss(ilshat);
             zhenya.AddBoss(ilshat);
-
             lyaysan.AddBoss(sergey);
             marat.AddBoss(lyaysan);
             dina.AddBoss(lyaysan);
